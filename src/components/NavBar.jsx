@@ -28,9 +28,9 @@ const NavBar = () => {
       handleUserLogout();
       localStorage.clear();
       !isLogin && navigate("/loginuser");
-      // window.location.href("/loginuser");
     }
   };
+
   const [userToken, setUserToken] = useState(null);
   const [vendorToken, setVendorToken] = useState(null);
 
@@ -39,7 +39,7 @@ const NavBar = () => {
     const vendorToken = localStorage.getItem("ventoken");
     setUserToken(userToken);
     setVendorToken(vendorToken);
-  }, [isAuthenticated, isLogin]); // Update when authentication status changes
+  }, [isAuthenticated, isLogin]);
 
   return (
     <>
@@ -80,12 +80,12 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              {isLogin && (
+              {isLogin && userType === "user" && (
                 <li>
                   <NavLink to="/userhomepage">UserHome</NavLink>
                 </li>
               )}
-              {vendorToken && (
+              {vendorToken && userType === "vendor" && (
                 <li>
                   <NavLink to="/vendorhomepage">vendorHome</NavLink>
                 </li>
