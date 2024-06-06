@@ -11,7 +11,7 @@ import axiosInstance from "../pages/axiosInstance";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const nevigate = useNavigate();
+  const navigate = useNavigate();
   const {
     userType,
     setUserType,
@@ -27,10 +27,10 @@ const NavBar = () => {
       handleVendorLogout();
       handleUserLogout();
       localStorage.clear();
-      !isLogin && nevigate("/loginuser");
-      // window.location.href("/loginuser");
+      !isLogin && (window.location.href = "/loginuser");
     }
   };
+
   const [userToken, setUserToken] = useState(null);
   const [vendorToken, setVendorToken] = useState(null);
 
@@ -39,8 +39,7 @@ const NavBar = () => {
     const vendorToken = localStorage.getItem("ventoken");
     setUserToken(userToken);
     setVendorToken(vendorToken);
-    
-  }, []);
+  }, [isAuthenticated, isLogin]);
 
   return (
     <>
@@ -72,7 +71,6 @@ const NavBar = () => {
           {!isAuthenticated ? (
             <>
               {" "}
-              
               <li>
                 <NavLink to="/loginuser">Login</NavLink>
               </li>
@@ -82,37 +80,32 @@ const NavBar = () => {
             </>
           ) : (
             <>
-            {userToken && (
-                
+              { isLogin && userToken && userType === "user" && (
+                <li>
+                  <NavLink to="/userhomepage">UserHome</NavLink>
+                </li>
+              )}
+              { isLogin &&vendorToken && userType === "vendor" && (
+                <li>
+                  <NavLink to="/vendorhomepage">vendorHome</NavLink>
+                </li>
+              )}
               <li>
-                <NavLink to="/userhomepage">UserHome</NavLink>
-              </li>
-              
-            
-          )}
-          {vendorToken && (
-            
-              <li>
-                <NavLink to="/vendorhomepage">vendorHome</NavLink>
-              </li>
-            
-          )}
-            <li>
-              <NavLink
-                to={{
-                  pathname: "/logout",
-                  state: { userType: { userType } },
-                }}
-                onClick={() => {
-                  console.log("clicked logout");
+                <NavLink
+                  to={{
+                    pathname: "/logout",
+                    state: { userType: { userType } },
+                  }}
+                  onClick={() => {
+                    console.log("clicked logout");
 
-                  setLogout();
-                  setIsAuthenticated(false);
-                }}
-              >
-                Logout
-              </NavLink>
-            </li>
+                    setLogout();
+                    setIsAuthenticated(false);
+                  }}
+                >
+                  Logout
+                </NavLink>
+              </li>
             </>
           )}
         </ul>
