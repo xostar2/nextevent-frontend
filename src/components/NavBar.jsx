@@ -11,6 +11,8 @@ import axiosInstance from "../pages/axiosInstance";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [userToken, setUserToken] = useState(null);
+  const [vendorToken, setVendorToken] = useState(null);
   const navigate = useNavigate();
   const {
     userType,
@@ -31,8 +33,7 @@ const NavBar = () => {
     }
   };
 
-  const [userToken, setUserToken] = useState(null);
-  const [vendorToken, setVendorToken] = useState(null);
+  
 
   useEffect(() => {
     const userToken = localStorage.getItem("token");
@@ -80,12 +81,12 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              { isLogin && userToken && userType === "user" && (
+              { isLogin && userToken && (
                 <li>
                   <NavLink to="/userhomepage">UserHome</NavLink>
                 </li>
               )}
-              { isLogin &&vendorToken && userType === "vendor" && (
+              { isLogin && vendorToken  && (
                 <li>
                   <NavLink to="/vendorhomepage">vendorHome</NavLink>
                 </li>
