@@ -80,7 +80,7 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              {isLogin && userType === "user" && (
+              {token && userType === "user" && (
                 <li>
                   <NavLink to="/userhomepage">UserHome</NavLink>
                 </li>
