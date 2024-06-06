@@ -1,0 +1,162 @@
+.user-registration-form-signup {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.1);
+  border-radius: 20px;
+  width:30rem;
+}
+
+.main-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2a70c6;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-username,
+.form-group-email,
+.form-group-aadhar,
+.form-group-address,
+.form-group-password,
+.form-group-phone,
+.form-group-image {
+  margin-bottom: 1rem;
+}
+
+.form-group-username label,
+.form-group-email label,
+.form-group-aadhar label,
+.form-group-address label,
+.form-group-password label,
+.form-group-phone label,
+
+.mydict-usersignup label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.gender-span{
+  color:#3d3a4e;
+  font-size: small;
+}
+.form-group-username input,
+.form-group-email input,
+.form-group-aadhar input,
+.form-group-address input,
+.form-group-password input,
+.form-group-phone input,
+.form-group-image input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-group-username input:focus,
+.form-group-email input:focus,
+.form-group-aadhar input:focus,
+.form-group-address input:focus,
+.form-group-password input:focus,
+.form-group-phone input:focus,
+.form-group-image input:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.mydict-usersignup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.mydict label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.mydict div {
+  display: flex;
+  align-items: center;
+}
+
+.mydict label span {
+  margin-left: 0.5rem;
+}
+
+.birthdate {
+  margin-bottom: 1rem;
+  display: grid;
+}
+
+#submit-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 7px 202px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  
+  cursor: pointer;
+}
+.button-submit{
+  background-color: #40a9ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#submit-button:hover {
+  background-color: #1a69be;
+}
+
+@media (max-width: 768px) {
+  .user-registration-form-signup {
+    padding: 1rem;
+  }
+
+  .form-group-username input,
+  .form-group-email input,
+  .form-group-aadhar input,
+  .form-group-address input,
+  .form-group-password input,
+  .form-group-phone input,
+  .form-group-image input {
+    font-size: 0.9rem;
+  }
+
+  .form-group-username label,
+  .form-group-email label,
+  .form-group-aadhar label,
+  .form-group-address label,
+  .form-group-password label,
+  .form-group-phone label,
+  .form-group-image label {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+}

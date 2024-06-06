@@ -1,0 +1,17 @@
+.order-table-container {
+    margin: 20px;
+  }
+  
+  .MuiTable-root {
+    min-width: 650px;
+  }
+  
+  .MuiTableCell-head {
+    font-weight: bold;
+    background-color: #f5f5f5;
+  }
+  
+  .MuiTableCell-body {
+    font-size: 14px;
+  }
+  

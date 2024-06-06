@@ -1,0 +1,88 @@
+/* Base styles */
+.add-event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 438px;
+  margin: 48px auto;
+  background: linear-gradient(105deg, #fff, transparent);
+  border-radius: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  select,
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    .add-event-container {
+      padding: 15px;
+    }
+  
+    .form-group label {
+      font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+  
+    select,
+    input,
+    textarea {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* Media queries for larger screens (optional) */
+  @media (min-width: 992px) {
+    .add-event-container {
+      padding: 25px;
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+    }
+  
+    .form-group label {
+      font-size: 1rem; /* Adjust font size for larger screens */
+    }
+  
+    select,
+    input,
+    textarea {
+      font-size: 1rem; /* Adjust font size for larger screens */
+    }
+  }
+  

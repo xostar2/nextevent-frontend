@@ -1,0 +1,71 @@
+/* Import fonts or reset styles if needed */
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* Choose a preferred font family */
+}
+
+.container-grid-grid-two-cols-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2rem; /* Gap between columns */
+  align-items: center; /* Vertically center content within rows */
+}
+
+.hero-content-home {
+  padding: 2rem; /* Add some padding inside the content area */
+}
+
+.hero-content-home h1,
+.hero-content-home p {
+  margin: 1rem 0; /* Spacing between heading and paragraphs */
+}
+
+.hero-content-home p span {
+  font-weight: bold; /* Style the NexEvent title name */
+}
+
+.btn-btn-group-home {
+  display: flex; /* Buttons displayed horizontally */
+  justify-content: space-evenly; /* Buttons evenly spaced */
+  margin-top: 1rem; /* Space after content */
+}
+
+.btn-btn-home {
+  padding: 1rem 1rem; /* Button padding */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickable button */
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+  background-color: #2672cf; /* Button background color */
+}
+
+.btn-btn-home:hover {
+  background-color: #020202; /* Button hover color */
+}
+
+.hero-image-home {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center image within its container */
+}
+
+.hero-image-home img {
+  max-width: 100%; /* Image scales down on smaller screens */
+  height: auto; /* Maintain image aspect ratio */
+}
+
+/* Media queries for smaller screens */
+
+@media (max-width: 768px) {
+  .container-grid-grid-two-cols-home {
+    grid-template-columns: 1fr; /* Stack elements vertically on small screens */
+  }
+
+  .hero-content-home,
+  .hero-image-home {
+    padding: 1rem;
+  }
+}

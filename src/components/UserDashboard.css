@@ -1,0 +1,23 @@
+#user-dashboard {
+    padding: 2rem;
+  }
+  
+  #user-data {
+    margin-bottom: 2rem;
+  }
+  
+  #user-image {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  #buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  #buttons button {
+    margin: 0 1rem;
+  }
+  

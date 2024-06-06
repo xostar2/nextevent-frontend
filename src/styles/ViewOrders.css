@@ -1,0 +1,53 @@
+
+body {
+    
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Table container */
+  .table-container-user-details {
+    margin: 50px auto;
+    max-width: 100rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Opacity */
+    border-radius: 15px; /* Border radius */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Table */
+  .user-table-testing-user-details {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Table header */
+  .user-table-testing-user-details th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  /* Table body */
+  .user-table-testing-user-details td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  /* Apply some styles for buttons if needed */
+  .button {
+    /* Button styles */
+  }
+  
+  .button-content {
+    /* Button content styles */
+  }
+  
+  /* Media Query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .table-container-user-details {
+      max-width: 90%;
+    }
+  }
+  

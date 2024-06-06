@@ -1,0 +1,25 @@
+.event-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+    grid-gap: 1rem; /* Adjust margin between cards */
+    margin: 0 auto; /* Center the grid horizontally (optional) */
+  }
+  
+  .card {
+    /* Additional styles for overall card appearance (optional) */
+  }
+  
+  .card-image {
+    height: 200px; /* Adjust fixed or maximum height for images */
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100px; /* Adjust max-height for content as needed */
+  }
+  

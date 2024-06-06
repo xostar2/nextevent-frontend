@@ -1,0 +1,123 @@
+/* Base styles for event cards and container */
+.event-card-container {
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.event-card-container .event-card {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 5px; /* Adjust spacing based on desired layout */
+}
+
+/* Added property for spacing between rows */
+.event-card-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content-container-user-home-page {
+  display: flex;
+  justify-content: center;
+}
+
+.content-container-user-home-page-event-card {
+  margin-top: 3rem;
+}
+/* Assuming your EventUserCard component has styles for individual cards */
+
+/* Assuming your EventUserCard component has styles for individual cards */
+
+.content-container-user-home-page-event-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minimum card width as needed */
+  grid-auto-rows: minmax(300px, auto); /* Set minimum card height and allow content to grow */
+  grid-gap: 1rem; /* Adjust margin between cards */
+  margin: 0 auto; /* Center the grid horizontally */
+  width: 80%; /* Adjust container width as needed (optional) */
+}
+
+.loading-indicator,
+.error-message {
+  text-align: center;
+  padding: 1rem;
+}
+
+
+
+/* Media queries for responsive layout adjustments */
+
+/* For screens smaller than 768px (portrait mobile) */
+@media (max-width: 767px) {
+  .event-card-container {
+    width: 100%; /* Adjust width for single-column layout */
+  }
+
+  .event-card {
+    width: 100%; /* Make cards full-width on small screens */
+  }
+}
+
+/* For screens between 768px and 991px (landscape mobile, tablet) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .event-card-container {
+    width: 80%; /* Adjust width for optimal layout */
+  }
+
+  .event-card {
+    width: calc(50% - 10px); /* Adjust card width for two columns */
+  }
+}
+
+/* For screens larger than 991px (desktop) */
+@media (min-width: 992px) {
+  .event-card-container {
+    width: 80%; /* Maintain container width */
+  }
+
+  .event-card {
+    width: calc(33% - 10px); /* Adjust card width for three columns */
+  }
+}
+
+.content-container-user-home-page-event-card {
+  padding: 2rem;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.event-card-container {
+  display: grid;
+  grid-template-columns: repeat(0, 2fr); /* 3 columns */
+  gap: 2rem; /* Gap between cards */
+}
+
+@media (max-width: 900px) {
+  .event-card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .event-card-container {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
