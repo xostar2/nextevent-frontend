@@ -81,12 +81,12 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              { isLogin && isAuthenticated && userToken   && (
+              { isLogin && isAuthenticated && userType==="user"   && (
                 <li>
                   <NavLink to="/userhomepage">UserHome</NavLink>
                 </li>
               )}
-              { isLogin && isAuthenticated && vendorToken   && (
+              { isLogin && isAuthenticated && userType==="vendor"   && (
                 <li>
                   <NavLink to="/vendorhomepage">vendorHome</NavLink>
                 </li>
