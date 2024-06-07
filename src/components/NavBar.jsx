@@ -81,16 +81,16 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              { userToken.length>0   && (
+              
                 <li>
                   <NavLink to="/userhomepage">UserHome</NavLink>
                 </li>
-              )}
-              {  vendorToken.length>0   && (
+              
+              
                 <li>
                   <NavLink to="/vendorhomepage">vendorHome</NavLink>
                 </li>
-              )}
+            
               <li>
                 <NavLink
                   to={{
